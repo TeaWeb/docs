@@ -68,7 +68,15 @@
 * `${bodyBytesSent}` - 发送的内容长度，不包括Header（字节）
 * `${status}` - 状态码，比如`200`
 * `${statusMessage}` - 状态消息，比如`200 OK`
+
+## 后端相关变量
 * `${backend.id}` - 后端服务器ID，v0.0.9开始支持
 * `${backend.code}` - 后端服务器代号，v0.0.9开始支持
 * `${backend.address}` - 后端服务器地址，v0.0.9开始支持
 * `${backend.scheme}` - 后端服务器协议，`http`或`https`，v0.0.9开始支持
+
+## 节点相关变量
+从v0.1.4开始，可以在TeaWeb中设置[集群](../advanced/cluster/Index.md)信息。如果当前TeaWeb设置了节点信息，可以使用以下变量：
+* `${node.id}` - 节点ID
+* `${node.name}` - 节点名称
+* `${node.role}` - 节点角色
