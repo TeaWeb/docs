@@ -13,7 +13,7 @@
     ~~~
     其中`127.0.0.1`可能需要换成你服务器的IP，而且我们默认使用了`7777`端口（可以在`configs/server.conf`中修改），如果访问遇到了问题，请检查防火墙设置；
 5. 使用用户名`admin`和密码`123456`登录，可以在`configs/admin.conf`中修改这些信息，也可以在设置界面中修改；
-6. 如果是Unix或者Linux，请确保安装目录下的`configs/`和`tmp/`是有读取和写入权限的。
+6. 如果是Unix或者Linux，请确保安装目录下的`configs/`和`web/tmp/`是有读取和写入权限的。
 7. [设置MongoDB](#mongodb)
 
 ## MongoDB

@@ -10,6 +10,19 @@ HTTPS通常的端口是`443`，建议不要轻易修改。
 可以在代理服务的"HTTPS"菜单对应的页面中看到这些信息：
 ![https-2.png](https-2.png)
 
+## HSTS
+从v0.1.5开始，可以设置HSTS，来强制浏览器使用安全的连接。可以在"修改" -- "更多选项"中开启。开启后，请求HTTPS时会自动发送一个响应Header：
+~~~
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+~~~
+之后，所有使用HTTP协议的请求也会自动转到HTTPS，直到HSTS过了有效期（`max-age`）。
+
+如果你在使用Google Chrome浏览器，可以在浏览器上访问：
+~~~
+chrome://net-internals/#hsts
+~~~
+来管理HSTS域名。
+
 ## 常见问题排查
 ### 浏览器提示证书错误
 如果你在浏览器上访问网站的时候，遇到证书错误提示，可以按下面步骤排查：

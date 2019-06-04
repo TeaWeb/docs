@@ -75,6 +75,16 @@
 * `${backend.address}` - 后端服务器地址，v0.0.9开始支持
 * `${backend.scheme}` - 后端服务器协议，`http`或`https`，v0.0.9开始支持
 
+## 缓存相关变量
+从v0.1.5开始，增加了一组缓存相关的变量：
+* `${cache.status}` - 缓存状态，值可能为：
+  * `BYPASS` - 没有开启缓存策略或者其他原因未通过缓存策略处理的时候，状态为`BYPASS`
+  * `HIT` - 已命中缓存
+  * `MISS` - 未命中缓存
+  * `PURGE` - 正在清除缓存
+* `${cache.policy.name}` - 缓存策略名称
+* `${cache.policy.type}` - 缓存策略类型（memory、redis之类）  
+
 ## 节点相关变量
 从v0.1.4开始，可以在TeaWeb中设置[集群](../advanced/cluster/Index.md)信息。如果当前TeaWeb设置了节点信息，可以使用以下变量：
 * `${node.id}` - 节点ID

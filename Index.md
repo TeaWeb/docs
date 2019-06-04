@@ -34,6 +34,7 @@
      * [参数](waf/Checkpoints.md)
      * [操作符](waf/Operators.md)
      * [正则表达式](waf/Regexp.md)
+  * [HTTP隧道](proxy/Tunnel.md)
   * [内置变量](proxy/Variables.md)
   * [前端代理](proxy/Frontend.md)
      * [Nginx](proxy/Nginx.md)
