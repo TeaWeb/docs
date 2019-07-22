@@ -37,7 +37,15 @@ firewall-cmd --reload
 Windows版本的目录下自带有 *start.bat* ，请解压后，直接双击运行 *start.bat* 即可。
 
 ## 开机启动脚本
-通常我们在安装软件后，希望能随开机启动，以免重启时忘了启动服务。从v0.0.10版本开始，Linux二进制发行版自带启动脚本模板，可以在 *scripts/* 目录下找到：
+通常我们在安装软件后，希望能随开机启动，以免重启时忘了启动服务。
+
+### 自动安装
+从v0.1.6开始，在Windows下可以运行`bin\`目录下的`service-install.exe`和`service-uninstall.exe`两个命令，分别是安装服务和卸载服务；如果后期TeaWeb安装目录改变了，需要先卸载服务再重新安装，以便服务能找到正确的TeaWeb目录。如果提示权限错误，以管理员身份运行这两个命令（通常在鼠标右键有"以管理员身份运行"）。
+
+在Linux下可以运行`bin/`下的`service-install`和`service-uninstall`两个命令，分别是安装服务和卸载服务；如果后期TeaWeb安装目录改变了，可以重新运行服务安装命令，以便服务能找到正确的TeaWeb目录。
+
+### 手动安装
+在v0.1.6之前，Linux二进制发行版自带启动脚本模板，可以在 *scripts/* 目录下找到：
 ~~~
 teaweb - teaweb启动脚本 
 teaweb-agent - agent启动脚本

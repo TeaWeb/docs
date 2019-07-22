@@ -72,4 +72,8 @@ bin\teaweb-agent.exe xxx
 ~~~
 
 ## 开机启动
-在Linux上可以设置开机启动服务，具体 [看这里](http://teaos.cn/doc/main/Install.md#%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC)。
+可以使用服务的方式设置Agent随开机启动。
+
+从v0.1.6开始，在Windows下可以运行`bin\`目录下的`service-install.exe`和`service-uninstall.exe`两个命令，分别是安装服务和卸载服务；如果后期Agent安装目录改变了，需要先卸载服务再重新安装，以便服务能找到正确的Agent安装目录。如果提示权限错误，以管理员身份运行这两个命令（通常在鼠标右键有"以管理员身份运行"）。
+
+在Linux下可以运行`bin/`下的`service-install`和`service-uninstall`两个命令，分别是安装服务和卸载服务；如果后期Agent安装目录改变了，可以重新运行服务安装命令，以便服务能找到正确的TeaWeb目录。

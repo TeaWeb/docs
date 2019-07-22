@@ -24,7 +24,7 @@
   * [匹配条件](proxy/RequestCond.md)
   * [Websocket](proxy/Websocket.md)
   * Gzip压缩
-  * 访问日志
+  * [访问日志](log/Index.md)
   * 统计
   * [缓存](cache/Index.md)
      * [清除缓存指令](cache/PurgeAPI.md)
@@ -35,6 +35,7 @@
      * [操作符](waf/Operators.md)
      * [正则表达式](waf/Regexp.md)
   * [HTTP隧道](proxy/Tunnel.md)
+  * [TCP代理](proxy/Tcp.md)
   * [内置变量](proxy/Variables.md)
   * [前端代理](proxy/Frontend.md)
      * [Nginx](proxy/Nginx.md)
@@ -55,6 +56,7 @@
 * 通知媒介
   * [钉钉群机器人](notices/DingTalk.md)
   * [企业微信](notices/QyWeixin.md)
+  * 企业微信群机器人
   * [阿里云短信](notices/AliyunSms.md)
   * [TeaOS云短信](notices/TeaSms.md)
 * 图表API
@@ -74,17 +76,16 @@
   * Javascript辅助函数
      * 数组
 * 高级
-  * [外部监控API](advanced/APIMonitor.md)
-  * [主机监控项API](advanced/APIMonitorAgentItem.md)
   * [集群](advanced/cluster/Index.md)
      * [安装集群控制台](advanced/cluster/Install.md)
      * [集群配置](advanced/cluster/Config.md)
      * [节点设置](advanced/cluster/Node.md)
+  * [Docker](advanced/Docker.md)
 * 开发者
   * [从源码启动或编译](main/Build.md)
   * 插件
      * [写一个插件](plugins/Write.md)
      * [安装插件](plugins/Install.md)
+* [HTTP API](api/Index.md)
 * [正则表达式](regexp/Regexp.md)
-* [TeaWeb+](plus/Index.md)
 * [捐助作者](donate/Index.md)
