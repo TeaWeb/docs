@@ -1,15 +1,16 @@
 # 常用命令
-## 打印帮助信息
+## TeaWeb控制
+### 打印帮助信息
 ~~~bash
 ./bin/teaweb -h
 ~~~
 
-## 打印版本信息
+### 打印版本信息
 ~~~bash
 ./bin/teaweb -v
 ~~~
 
-## 启动服务
+### 启动服务
 启动服务并在后台运行：
 ~~~bash
 ./bin/teaweb start
@@ -20,30 +21,62 @@
 ./bin/teaweb
 ~~~
 
-## 停止服务
+### 停止服务
 ~~~bash
 ./bin/teaweb stop
 ~~~
 
-## 重启服务
+### 重启服务
 ~~~bash
 ./bin/teaweb restart
 ~~~
 
-## 重新加载代理配置
+### 重新加载代理配置
 v0.1以后支持
 ~~~bash
 ./bin/teaweb reload
 ~~~
 
-## 重置服务状态
+### 重置服务状态
 v0.0.8以后支持
 ~~~bash
 ./bin/teaweb reset
 ~~~
 
-## 查看服务状态
+### 查看服务状态
 v0.1以后支持
 ~~~bash
 ./bin/teaweb status
+~~~
+
+### 开启pprof
+从v0.1.7开始，可以使用以下命令开启pprof模式，用来监控TeaWeb运行性能信息：
+~~~bash
+./bin/teaweb pprof
+~~~
+默认pprof地址为`:6060`
+
+启动后可以在浏览器上访问这个地址，比如 `http://127.0.0.1:6060` ，或者使用`go tool pprof`命令来查看，比如查看alloc的heap信息：
+~~~bash
+go tool pprof -alloc_space  "http://127.0.0.1:6060/debug/pprof/heap"
+~~~
+
+你可以指定别的地址：
+~~~bash
+./bin/teaweb pprof 127.0.0.1:8888
+~~~
+
+## 系统服务
+可以以系统服务的方式管理TeaWeb。
+
+### 安装系统服务
+从v0.1.6开始，Linux和Windows支持：
+~~~bash
+./bin/service-install
+~~~
+
+### 卸载系统服务
+从v0.1.6开始，Linux和Windows支持：
+~~~bash
+./bin/service-uninstall
 ~~~

@@ -21,7 +21,7 @@ GET
   "go": "go1.12.5",
   "heap": 106525744,
   "memory": 213225720,
-  "mongo": true,
+  "database": true,
   "objects": 643558,
   "os": "darwin",
   "pid": 61388,
@@ -29,3 +29,4 @@ GET
   "version": "0.1.6"
 }
 ~~~
+其中 `database` 从 v0.1.7 开始加入。

@@ -19,6 +19,9 @@ git --version
 
 如果还没有安装Git，可以从[这里](https://git-scm.com/downloads)下载你的操作系统对应的版本。安装后可能需要重新打开你的终端或命令行工具才会生效。
 
+## 使用工具下载源码
+TeaWeb提供了一个工具方便开发者下载源码，可以在 [https://github.com/TeaWeb/code-setup/releases](https://github.com/TeaWeb/code-setup/releases) 下载最新的版本，然后在某个空目录运行此工具，即可下载全部源码到当前空目录，并且会自动启动下载好的TeaWeb服务。
+
 ## 从源码运行
 1. 从 `https://github.com/TeaWeb/build` 中下载项目源码，放到本地磁盘上；
 2. 在开发工具中设置全局变量`GOPATH`为项目目录路径；

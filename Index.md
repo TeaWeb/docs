@@ -25,6 +25,7 @@
   * [Websocket](proxy/Websocket.md)
   * Gzip压缩
   * [访问日志](log/Index.md)
+     * [日志存储策略](log/Storage.md)
   * 统计
   * [缓存](cache/Index.md)
      * [清除缓存指令](cache/PurgeAPI.md)
@@ -43,10 +44,14 @@
      <!-- * Varnish -->
      <!-- * Squid -->
      <!-- * HAProxy -->
+  * IPv6
+  * HTTP/2
   * [性能指南](proxy/Performance.md)
 * 监控
    * [Agent概念](agents/Index.md)
    * [安装Agent](agents/Install.md)
+      * [通过ID和Key安装Agent](agents/InstallIdKey.md)
+      * [通过Group Key安装Agent](agents/InstallGroupKey.md)
    * [应用（App）](agents/App.md)
    <!--* 任务-->
    * [监控项](agents/Item.md)

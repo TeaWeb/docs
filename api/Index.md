@@ -46,6 +46,12 @@ Content-Type: application/json; charset=utf-8
 }
 ~~~
 
+## 易读的JSON格式
+如果要想返回更加易读的JSON格式，可以在参数中添加 `TeaPretty` 参数，比如：
+~~~
+http://192.168.1.100:7777/api/v1/status?TeaKey=W7cy2eFpOKOPgOlaoDgbX11QNPAgIL5E&TeaPretty
+~~~
+
 ## API列表
 以下API列表中的`${xxx}`用来表示一个变量，实际调用的时候需要将变量值代入。
 
