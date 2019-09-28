@@ -64,6 +64,11 @@ http://192.168.1.100:7777/api/v1/status?TeaKey=W7cy2eFpOKOPgOlaoDgbX11QNPAgIL5E&
 * 代理
   * [`GET /api/v1/proxy/servers`](v1/proxy/Servers.md) - 代理服务列表，v0.1.6
   * [`GET /api/v1/proxy/${serverId}`](v1/proxy/Server.md) - 单个代理服务信息，v0.1.6
+  * 访问日志：
+     * [`GET /api/v1/proxy/${serverId}/accesslog/latest`](v1/proxy/accesslog/Next.md) - 读取最后一条访问日志，v0.1.8
+     * [`GET /api/v1/proxy/${serverId}/accesslog/next/${id}`](v1/proxy/accesslog/Latest.md) - 读取下一条访问日志，v0.1.8
+     * [`GET /api/v1/proxy/${serverId}/accesslog/list/${size}`](v1/proxy/accesslog/LatestList.md) - 读取最后N条访问日志，v0.1.8
+     * [`GET /api/v1/proxy/${serverId}/accesslog/next/${id}/list/${size}`](v1/proxy/accesslog/NextList.md) - 读取下N条访问日志，v0.1.8
 * 监控Agent
   * [`GET /api/v1/agents`](v1/agent/Agents.md) - Agent列表，v0.1.6
   * [`GET /api/v1/agent/${agentId}`](v1/agent/Agent.md) - 查看单个Agent信息，v0.1.6

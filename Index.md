@@ -44,8 +44,8 @@
      <!-- * Varnish -->
      <!-- * Squid -->
      <!-- * HAProxy -->
-  * IPv6
-  * HTTP/2
+  * [IPv6](proxy/IPv6.md)
+  * [HTTP/2](proxy/HTTP2.md)
   * [性能指南](proxy/Performance.md)
 * 监控
    * [Agent概念](agents/Index.md)

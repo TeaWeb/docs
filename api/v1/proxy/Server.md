@@ -19,7 +19,6 @@ GET
 
 ## 返回结果示例
 ~~~json
-
 {
   "config": {
     "headers": [

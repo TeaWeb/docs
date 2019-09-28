@@ -66,6 +66,16 @@ go tool pprof -alloc_space  "http://127.0.0.1:6060/debug/pprof/heap"
 ./bin/teaweb pprof 127.0.0.1:8888
 ~~~
 
+### 集群同步
+从v0.1.8开始，可以使用以下命令跟集群同步：
+~~~bash
+./bin/teaweb sync
+~~~
+如果是Master节点，则会自动将本地的配置同步到集群，同步时，只要在`configs/`下的配置文件都会被同步，所以你可以在`configs/`下加入自己的配置文件，以便利用集群同步到其他节点。
+
+如果是Slave节点，则自动从集群同步配置到本地。
+
+
 ## 系统服务
 可以以系统服务的方式管理TeaWeb。
 
@@ -75,8 +85,12 @@ go tool pprof -alloc_space  "http://127.0.0.1:6060/debug/pprof/heap"
 ./bin/service-install
 ~~~
 
+在Linux上，此命令需要使用`root`分组的用户操作，所以你可能需要切换到`root`账号，或者使用`sudo ...`来运行。
+
 ### 卸载系统服务
 从v0.1.6开始，Linux和Windows支持：
 ~~~bash
 ./bin/service-uninstall
 ~~~
+
+在Linux上，此命令需要使用`root`分组的用户操作，所以你可能需要切换到`root`账号，或者使用`sudo ...`来运行。

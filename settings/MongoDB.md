@@ -1,5 +1,5 @@
 # MongoDB
-**注意：目前TeaWeb只支持MongoDB v3.0以上版本，如果你正在使用老的版本，请更换。**
+**注意：目前TeaWeb只支持MongoDB v4.0以上版本，如果你正在使用老的版本，请更换。**
 
 在这里可以修改MongoDB的连接设置：
 ![mongodb.png](mongodb.png)

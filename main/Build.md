@@ -20,7 +20,7 @@ git --version
 如果还没有安装Git，可以从[这里](https://git-scm.com/downloads)下载你的操作系统对应的版本。安装后可能需要重新打开你的终端或命令行工具才会生效。
 
 ## 使用工具下载源码
-TeaWeb提供了一个工具方便开发者下载源码，可以在 [https://github.com/TeaWeb/code-setup/releases](https://github.com/TeaWeb/code-setup/releases) 下载最新的版本，然后在某个空目录运行此工具，即可下载全部源码到当前空目录，并且会自动启动下载好的TeaWeb服务。
+TeaWeb提供了一个工具方便开发者下载源码，可以在 [https://github.com/TeaWeb/code-setup/releases](https://github.com/TeaWeb/code-setup/releases) 下载最新的版本，然后在某个空目录运行此工具，即可下载全部源码到当前空目录，并且会自动启动下载好的TeaWeb服务。当然，事前也需要安装Golang和Git。
 
 ## 从源码运行
 1. 从 `https://github.com/TeaWeb/build` 中下载项目源码，放到本地磁盘上；
@@ -52,6 +52,22 @@ git clone https://github.com/TeaWeb/build.git
 如果你正在使用GoLand开发工具，则可以在下面的界面中设置GOPATH:
 ![goland.png](goland.png)
 其中画红框的部分为你的本地的项目根目录，在`src`目录的上一级。
+
+## 常见问题
+### 编译时遇到ACME相关错误
+因为我们自己修改了`go-acme/lego`包，所以如果你直接从github上用`go get`获取代码可能会出现以下错误：
+~~~
+../github.com/TeaWeb/code/teaconfigs/ssl_acme_request.go:121:42: client.Certificate.GetRecords undefined (type *certificate.Certifier has no field or method GetRecords)
+~~~
+
+解决方法：只需要从 `https://github.com/TeaWeb/build/tree/master/src/github.com/go-acme/lego` 下载源码并覆盖即可。
+
+
+### git clone下载太慢
+如果`git clone`太慢，可以尝试指定`depth`参数：
+~~~
+git clone "https://github.com/TeaWeb/build.git" --depth=1
+~~~
 
 ## 寻求帮助
 遇到了问题？可以在[这里](http://teaos.cn/community)找到社区的联系方式，加入社区在线咨询。
