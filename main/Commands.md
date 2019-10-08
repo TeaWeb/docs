@@ -56,10 +56,22 @@ v0.1以后支持
 ~~~
 默认pprof地址为`:6060`
 
-启动后可以在浏览器上访问这个地址，比如 `http://127.0.0.1:6060` ，或者使用`go tool pprof`命令来查看，比如查看alloc的heap信息：
+启动后可以在浏览器上访问这个地址，比如 `http://127.0.0.1:6060/debug/pprof/` ，或者使用`go tool pprof`命令来查看，比如查看所有alloc的heap信息：
 ~~~bash
 go tool pprof -alloc_space  "http://127.0.0.1:6060/debug/pprof/heap"
 ~~~
+
+查看正在使用的内存空间：
+~~~bash
+go tool pprof -inuse_space  "http://127.0.0.1:6060/debug/pprof/heap"
+~~~
+
+查看CPU调用信息：
+~~~bash
+go tool pprof  "http://127.0.0.1:6060/debug/pprof/profile"
+~~~
+
+还有更多的示例可以参考 [https://jvns.ca/blog/2017/09/24/profiling-go-with-pprof/](https://jvns.ca/blog/2017/09/24/profiling-go-with-pprof/)。
 
 你可以指定别的地址：
 ~~~bash

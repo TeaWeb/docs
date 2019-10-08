@@ -23,10 +23,11 @@
   * [重写规则](proxy/Rewrite.md)
   * [匹配条件](proxy/RequestCond.md)
   * [Websocket](proxy/Websocket.md)
-  * Gzip压缩
+  * [Gzip压缩](proxy/Gzip.md)
   * [访问日志](log/Index.md)
      * [日志存储策略](log/Storage.md)
-  * 统计
+  * [统计](proxy/stat/Index.md)
+     * [数据指标](proxy/stat/Item.md)
   * [缓存](cache/Index.md)
      * [清除缓存指令](cache/PurgeAPI.md)
   * [WAF](waf/Index.md)
