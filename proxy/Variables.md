@@ -61,6 +61,7 @@
 * `${arg.NAME}` - 单个参数值
 * `${headers}` - 所有Header信息组合字符串
 * `${header.NAME}` - 单个Header值
+* `${documentRoot}` - 当前请求的文档根目录，v0.1.9
 
 ## 响应相关变量
 * `${requestTime}` - 请求花费时间

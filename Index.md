@@ -47,7 +47,8 @@
      <!-- * HAProxy -->
   * [IPv6](proxy/IPv6.md)
   * [HTTP/2](proxy/HTTP2.md)
-  * [性能指南](proxy/Performance.md)
+  * [性能](proxy/Performance.md)
+     * [性能测试](proxy/Benchmark.md)
 * 监控
    * [Agent概念](agents/Index.md)
    * [安装Agent](agents/Install.md)
@@ -79,8 +80,9 @@
      * 代理统计
      * 代理访问日志
      * 主机监控项
-  * Javascript辅助函数
-     * 数组
+  * [Javascript辅助函数](javascript/Helper.md)
+     * 数组   
+     * [代理服务上下文](javascript/ProxyContext.md)
 * 高级
   * [集群](advanced/cluster/Index.md)
      * [安装集群控制台](advanced/cluster/Install.md)

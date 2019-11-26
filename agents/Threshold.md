@@ -170,3 +170,53 @@ ${ROW.name}已使用80%
 javascript:new Date().getTime() / 1000 - ${timestamp}
 ~~~
 例子中的`${timestamp}`从数值中获取。
+
+## 格式化
+可以使用函数来格式化阈值：
+~~~
+值 | 函数1(参数1, 参数2, ...) | 函数2 | ...
+~~~
+如上所示，使用竖线`|`分隔多个函数，如果函数有参数的话，可以使用`(`和`)`来包含，多个参数之间用英文逗号`,`隔开。
+
+目前支持的函数有：
+
+### 转换为浮点数数字 - float
+v0.1.8.2加入，没有参数，或者参数为格式化字符串，随后跟更多格式化中的参数：
+~~~
+${ROW.percent | float}                         => 123.456712
+${ROW.percent | float('%.2f')}                 => "123.46"
+${ROW.percent | float('%.2f%s', ' Percent')}   => "123.46 Percent"
+~~~
+
+### 对数字四舍五入 - round
+v0.1.8.2加入，没有参数或者参数为需要保留的小数点个数：
+~~~
+${ROW.percent | round}     => "123"
+${ROW.percent | round(2)}  => "123.46"
+~~~
+
+### 对数字进行取不小于它的整数 - ceil
+v0.1.8.2加入：
+~~~
+${ROW.percent | ceil}      => "124"
+~~~
+
+### 对数字进行取不大于它的整数 - floor
+v0.1.8.2加入：
+~~~
+${ROW.percent | floor}    => "123"
+~~~
+
+### 格式化 - format
+v0.1.8.2加入，参数为格式化字符串，随后跟更多格式化中的参数：
+~~~
+${ROW.percent | format('%.2f')}                   => "123.46"
+${ROW.percent | format('%.2f%s', ' Percent')}     => "123.46 Percent"
+~~~
+
+### 附加参数 - append
+v0.1.8.2加入，参数为格式化字符串，随后跟更多格式化中的参数：
+~~~
+${ROW.name | append('Book')}           => GolangBook
+${ROW.name | append('A', 'B', 'C')}    => GolangABC
+~~~

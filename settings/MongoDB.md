@@ -18,6 +18,7 @@
 在Linux和MacOS上，解压MongoDB安装包后，建议的启动命令为：
 ~~~bash
 cd MongoDB安装目录
+mkdir data
 bin/mongod --dbpath=./data/ --fork --logpath=./data/fork.log
 ~~~
 
